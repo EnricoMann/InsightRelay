@@ -1,0 +1,84 @@
+version: "3.9"
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: always
+    env_file:
+      - .env
+      - .env.example
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+      - ./backend/db/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  redis:
+    image: redis:7-alpine
+    restart: always
+    env_file:
+      - .env
+      - .env.example
+    ports:
+      - "6379:6379"
+    volumes:
+      - redisdata:/data
+
+  api:
+    build:
+      context: ./backend/api
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env
+      - .env.example
+    ports:
+      - "8080:8080"
+    restart: always
+
+  worker-collector:
+    build:
+      context: ./backend/worker-collector
+      dockerfile: Dockerfile
+    depends_on:
+      - api
+      - redis
+    env_file:
+      - .env
+      - .env.example
+    restart: always
+
+  worker-processor:
+    build:
+      context: ./backend/worker-processor
+      dockerfile: Dockerfile
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env
+      - .env.example
+    restart: always
+
+  dashboard:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_URL: http://localhost:8080
+    env_file:
+      - .env
+      - .env.example
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+    restart: always
+
+volumes:
+  dbdata:
+  redisdata:

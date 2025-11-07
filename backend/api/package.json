@@ -1,0 +1,26 @@
+{
+  "name": "insightrelay-api",
+  "version": "0.1.0",
+  "type": "commonjs",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsc -w & nodemon dist/index.js",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "bullmq": "^5.11.0",
+    "fastify": "^4.28.1",
+    "@fastify/cors": "^8.5.0",
+    "ioredis": "^5.4.1",
+    "pg": "^8.12.0",
+    "pino-pretty": "^11.2.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.6",
+    "nodemon": "^3.0.2",
+    "typescript": "^5.4.5",
+    "@types/pg": "^8.10.2"
+  }
+}
