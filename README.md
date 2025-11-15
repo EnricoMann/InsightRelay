@@ -1,6 +1,7 @@
 # 🚀 InsightRelay — Trending Developer Insights
 
-![InsightRelay Dashboard](https://github.com/user-attachments/assets/da2a8b4a-d2be-48fa-9cb0-1783e636aa63)
+<img width="1137" height="896" alt="insightrelay" src="https://github.com/user-attachments/assets/8e4073ae-4c9a-4a0e-8059-e50f71c71196" />
+
 
 InsightRelay is a full-stack application that **collects and visualizes trending developer content** from:
 - **Hacker News**
