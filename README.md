@@ -1,4 +1,4 @@
-# 🚀 InsightRelay — Trending Developer Insights
+#  InsightRelay — Trending Developer Insights
 
 <img width="1137" height="896" alt="insightrelay" src="https://github.com/user-attachments/assets/8e4073ae-4c9a-4a0e-8059-e50f71c71196" />
 
@@ -37,7 +37,7 @@ The project leverages **Docker**, **BullMQ**, and **Redis** for background jobs 
 
 ---
 
-## 🏗️ Architecture Overview
+##  Architecture Overview
 
 The system consists of **six containerized services**:
 
@@ -99,25 +99,25 @@ NEXT_PUBLIC_API_URL=http://localhost:8080
 
 ---
 
-## 🧠 Features
+##  Features
 
-- 🔁 **Automated trending data collection** via background workers.  
-- 📊 **Unified dashboard** showing cross-platform insights.  
-- 🕓 **Cron-based collectors** for periodic updates.  
-- ⚡ **Full Docker environment** for quick setup.  
+-  **Automated trending data collection** via background workers.  
+-  **Unified dashboard** showing cross-platform insights.  
+-  **Cron-based collectors** for periodic updates.  
+-  **Full Docker environment** for quick setup.  
 
 ---
 
-## 🪪 License
+##  License
 
 This project is licensed under the **MIT License** — see the [LICENSE](./LICENSE) file for details.
 
 ---
 
-## 💡 Author
+##  Author
 
 Built by [**Enrico Mann**](https://github.com/EnricoMann)
 
-📫 **Connect with me:**
+ **Connect with me:**
 - [GitHub](https://github.com/EnricoMann)
 - [LinkedIn](https://www.linkedin.com/in/enrico-mann)
