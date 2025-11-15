@@ -12,7 +12,7 @@ The project leverages **Docker**, **BullMQ**, and **Redis** for background jobs 
 
 ---
 
-## 🧩 Tech Stack
+##  Tech Stack
 
 **Backend**
 - Node.js  
@@ -76,7 +76,7 @@ Once containers are running:
 
 ---
 
-## ⚙️ Environment Variables
+##  Environment Variables
 
 Copy `.env.example` to `.env` and adjust as needed:
 
